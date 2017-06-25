@@ -7,5 +7,10 @@ pipeline {
                 sh './test.sh' 
             }
         }
+	stage('MySQL') {
+	    steps {
+		sh 'mysql -uroot -pmanai88'	
+	    }
+	}
     }
 }
