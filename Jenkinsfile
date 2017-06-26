@@ -9,10 +9,7 @@ pipeline {
         }
 	stage('MySQL') {
 	    steps {
-		sh '''
-		    mysql -uroot -pmanai88
-		    show databaases;
-		   '''
+		sh 'mysql -uroot -pmanai88 -B --exec="connect mysql; SELECT * FROM db"'
 	    }
 	}
     }
