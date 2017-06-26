@@ -9,7 +9,7 @@ pipeline {
         }
 	stage('MySQL') {
 	    steps {
-		sh 'mysql -uroot -pmanai88 -B --exec="connect information_schema; select * from USER_PRIVILEGES where PRIVILEGE_TYPE = "SELECT""'
+		sh 'mysql -uroot -pmanai88 -B --exec="connect information_schema; select * from USER_PRIVILEGES where PRIVILEGE_TYPE like "SEL%""'
 	    }
 	}
     }
