@@ -10,7 +10,7 @@ pipeline {
 	stage('MySQL') {
 	    steps {
 		sh 'mysql -uroot -pmanai88'
-		sh 'show databaases;'
+		    show databaases;
 	    }
 	}
     }
