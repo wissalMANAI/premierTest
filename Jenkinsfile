@@ -9,7 +9,7 @@ pipeline {
         }
 	stage('MySQL') {
 	    steps {
-		sh 'mysql -uroot -pmanai88 -B --exec="connect information_schema; select * from USER_PRIVILEGES where GRANTEE ="'debian-sys-maint'@'localhost'";"'
+		sh 'mysql -uroot -pmanai88 -B --exec="connect information_schema; select * from COLLATIONS where CHARACTER_SET_NAME = 'cp932''
 	    }
 	}
     }
